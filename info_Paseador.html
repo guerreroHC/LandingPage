@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Paseador</title>
+    <link rel="stylesheet" href="./styles/info.css">
+</head>
+<body>
+    <div class="back-button-container">
+        <a class="back-button" href="Ubi_paseador.html">&larr; Volver</a>
+    </div>
+    <h1>Información del Paseador</h1>
+
+    <div id="paseador-info-container"></div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const paseadorId = urlParams.get('id');
+
+        
+        const paseadores = [
+            { id: '1', nombre: 'Victor Cruz', precioHora: 'S/40', descripcion: '¡Hola! Soy Victor, un apasionado de los perros y experto en paseos divertidos y seguros. Con más de 5 años de experiencia, garantizo que tu mascota disfrutará de un paseo increíble. ¡Contáctame ahora mismo para reservar una caminata emocionante para tu peludo amigo!', imagen: 'images/Ellipse 5.svg', calificacion: 4, correo: 'victor@example.com', telefono: '123456789', direccion: 'Calle Principal 123' },
+
+            { id: '2', nombre: 'Fabricio Serna', precioHora: 'S/45', descripcion: '¡Saludos! Soy Fabricio, un amante de los animales y especialista en paseos energéticos. Con certificaciones en adiestramiento canino, puedo ayudar a mantener a tu perro en forma mientras se divierte al máximo. No pierdas la oportunidad de brindarle a tu mascota la atención y el ejercicio que se merece. ¡Reserva ahora!', imagen: 'images/Ellipse 11.svg', calificacion: 5, correo: 'fabricio@example.com', telefono: '987654321', direccion: 'Avenida Central 456' },
+
+            { id: '3', nombre: 'Jorge Ruiz', precioHora: 'S/35', descripcion: '¡Hola a todos los amantes de los perros! Soy Jorge, un apasionado paseador comprometido con el bienestar de tu mascota. Con mi experiencia y certificaciones en adiestramiento canino, te garantizo un paseo lleno de diversión y seguridad para tu peludo compañero. Contáctame y juntos crearemos una experiencia inolvidable para tu perro.', imagen: 'images/Ellipse 7.svg',  calificacion: 5, correo: 'jorge@example.com', telefono: '456789123', direccion: 'Plaza Principal 789' },
+
+            { id: '4', nombre: 'Erick Ramirez', precioHora: 'S/50', descripcion: '¡Saludos! Soy Erick, un amante de los animales y especialista en paseos energéticos. Con mi experiencia y dedicación, puedo ayudar a mantener a tu perro en forma mientras se divierte al máximo. No dejes que tu mascota se aburra en casa, ¡permíteme llevarlo a una aventura en cada paseo! Contáctame para reservar un servicio personalizado.', imagen: 'images/Ellipse 8.svg',  calificacion: 5, correo: 'erick@example.com', telefono: '321654987', direccion: 'Calle Secundaria 456' },
+
+            { id: '5', nombre: 'Pedro Rossel', precioHora: 'S/55', descripcion: '¡Hola! Soy Pedro, un paseador comprometido con el bienestar de tu perro. Con mi experiencia y pasión por los animales, puedo brindarle a tu mascota paseos divertidos y enérgicos. ¡Permíteme ayudarte a mantener a tu perro feliz y saludable! Contáctame para programar una caminata que se ajuste a las necesidades de tu peludo amigo.', imagen: 'images/Ellipse 9.svg',  calificacion: 5, correo: 'pedro@example.com', telefono: '654987321', direccion: 'Avenida Secundaria 789' },
+
+            { id: '6', nombre: 'Cesar Inciso', precioHora: 'S/60', descripcion: '¡Saludos! Soy Cesar, un amante de los animales y especialista en paseos energéticos. Con mi experiencia y conocimientos en adiestramiento canino, puedo asegurarte que tu perro se divertirá mientras se mantiene en forma. ¡No dudes en contactarme para brindarle a tu mascota una experiencia de paseo inigualable! Reserva ahora mismo.', imagen: 'images/Ellipse 10.svg',  calificacion: 5, correo: 'cesar@example.com', telefono: '789123456', direccion: 'Plaza Secundaria 123' }
+        ];
+
+        
+        const paseador = paseadores.find(p => p.id === paseadorId);
+
+       
+        if (paseador) {
+            const paseadorInfoContainer = document.getElementById('paseador-info-container');
+
+            const paseadorInfo = document.createElement('div');
+            paseadorInfo.classList.add('paseador-box');
+
+            const paseadorImage = document.createElement('img');
+            paseadorImage.src = paseador.imagen;
+            paseadorImage.classList.add('paseador-image');
+            paseadorInfo.appendChild(paseadorImage);
+
+            const paseadorDetails = document.createElement('div');
+            paseadorDetails.classList.add('paseador-details');
+
+            const paseadorNombre = document.createElement('h2');
+            paseadorNombre.textContent = paseador.nombre;
+            paseadorDetails.appendChild(paseadorNombre);
+
+            const paseadorPrecio = document.createElement('p');
+            paseadorPrecio.textContent = `Precio por hora: ${paseador.precioHora}`;
+            paseadorDetails.appendChild(paseadorPrecio);
+
+            const paseadorDescripcion = document.createElement('p');
+            paseadorDescripcion.textContent = paseador.descripcion;
+            paseadorDetails.appendChild(paseadorDescripcion);
+
+            const paseadorRating = document.createElement('div');
+            paseadorRating.classList.add('paseador-rating');
+            paseadorRating.innerHTML = generateRatingStars(paseador.calificacion);
+            paseadorDetails.appendChild(paseadorRating);
+
+            const paseadorCorreo = document.createElement('p');
+            paseadorCorreo.textContent = `Correo electrónico: ${paseador.correo}`;
+            paseadorDetails.appendChild(paseadorCorreo);
+
+            const paseadorTelefono = document.createElement('p');
+            paseadorTelefono.textContent = `Teléfono: ${paseador.telefono}`;
+            paseadorDetails.appendChild(paseadorTelefono);
+
+            const paseadorDireccion = document.createElement('p');
+            paseadorDireccion.textContent = `Dirección: ${paseador.direccion}`;
+            paseadorDetails.appendChild(paseadorDireccion);
+
+            const reservaButton = document.createElement('a');
+            reservaButton.classList.add('reserva-button');
+            reservaButton.href = "#";
+            reservaButton.textContent = 'RESERVAR';
+            paseadorDetails.appendChild(reservaButton);
+
+            paseadorInfo.appendChild(paseadorDetails);
+
+            paseadorInfoContainer.appendChild(paseadorInfo);
+        } else {
+            const paseadorInfoContainer = document.getElementById('paseador-info-container');
+            paseadorInfoContainer.innerHTML = '<p>No se encontró información del paseador.</p>';
+        }
+
+        function generateRatingStars(rating) {
+            const maxStars = 5;
+            const fullStar = '★';
+            const emptyStar = '☆';
+
+            const fullStarsCount = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+
+            let starsHTML = '';
+
+            for (let i = 0; i < fullStarsCount; i++) {
+                starsHTML += fullStar;
+            }
+
+            if (hasHalfStar) {
+                starsHTML += `${fullStar}${emptyStar.repeat(maxStars - fullStarsCount - 1)}`;
+            } else {
+                starsHTML += emptyStar.repeat(maxStars - fullStarsCount);
+            }
+
+            return starsHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #B9EDDD;
+    --secundario: #87CBB9;
+    --terciario: #569DAA;
+    --ultimo:#577D86;
+    --gris: #CCCC;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family:"Open Sans", sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+   
+}
+
+.menu {
+    background:var(--blanco);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position:fixed;
+    left: 0;
+    right:0;
+    top:0;
+    z-index: 999;
+    height: 85px;
+    width: 100vw;
+    display: flex;
+}
+
+input{
+    position: absolute;
+    width: 647px;
+    height: 125px;
+    left: 45px;
+    top: 20px;
+}
+
+.nav-list {
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    margin-right: 30px;
+}
+
+    .nav-list li {
+        margin: 0 5px;
+    }
+
+    .nav-list li a {
+        padding: 7px 13px;
+        text-decoration: none;
+        display: block;
+        color: var(--negro);
+    }
+
+    .nav-list li:hover, li.active {
+        background-color: var(--secundario);
+        font-weight: bold;
+        transition: .4s;
+    }
+
+.btn_menu {
+    margin-right: 30px;
+    color:var(--negro);
+    cursor: pointer;
+    display: none;
+}
+
+ul.show {
+    top:65px
+}
+
+.titulo {
+    position: absolute;
+    width: 95%;
+    height: 44px;
+    left: calc(50% - 700px/2 - 380px);
+    top: 100px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: left;
+}
+
+.map{
+    position: absolute;
+    width: 109px;
+    height: 99px;
+    left: 650px;
+    top: 70px;
+}
+
+
+
+.card1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 170px;
+    top: 170px;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+    
+}
+
+.card1 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 193.18px;
+    height: 193.18px;
+    left: 5px;
+    top: 19px;
+}
+
+.card1 p{
+    position: absolute;
+    width: 196px;
+    height: 50px;
+    left: 210px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: row;
+}
+
+.card1 .sub{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 138px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.card2{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 580px;
+    top: 170px;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+}
+
+.card2 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 193.18px;
+    height: 193.18px;
+    left: 5px;
+    top: 19px;
+}
+
+.card2 p{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.card2 .sub{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 138px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.card3{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 990px;
+    top: 170px;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+}
+
+.card3 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 193.18px;
+    height: 193.18px;
+    left: 5px;
+    top: 19px;
+}
+
+.card3 p{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.card3 .sub{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 138px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.card4{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 170px;
+    top: 450px;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+}
+
+.card4 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 193.18px;
+    height: 193.18px;
+    left: 5px;
+    top: 19px;
+}
+
+.card4 p{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.card4 .sub{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 138px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.card5{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 580px;
+    top: 450px;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+}
+
+.card5 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 193.18px;
+    height: 193.18px;
+    left: 5px;
+    top: 19px;
+}
+
+.card5 p{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.card5 .sub{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 138px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+.card6{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 990px;
+    top: 450px;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+ 
+}
+
+.card6 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 193.18px;
+    height: 193.18px;
+    left: 5px;
+    top: 19px;
+    
+}
+
+.card6 p{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 60px;
+    
+}
+
+.card6 .sub{
+    position: absolute;
+    width: 186px;
+    height: 50px;
+    left: 210px;
+    top: 138px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.img-petsmart {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.img-petsmart img{
+    height: 100px;
+    width: 150px;
+}
+
+@media screen and (max-width: 886px) {
+    /* Estilos para pantallas más pequeñas (iPad y móvil) */
+    
+    .search-input {
+        width: 100%;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    /* Estilos para el botón del menú hamburguesa */
+      .btn_menu {
+        display: block;
+        font-size: 24px;
+        margin-right: 10px;
+        color: var(--negro); 
+        position: absolute;
+        top: 0px;
+        right: 20px; 
+    }
+
+   
+    .nav-list.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 85px;
+        right: 10; 
+        background-color: var(--blanco);
+        width: 100%;
+        padding: 10px;
+        z-index: 999;
+        color: var(--negro); 
+    }
+
+    .nav-list.show li {
+        margin: 10px;
+    }
+
+    ul.show {
+        position: absolute;
+        top: 85px;
+        width: 100%;
+        left: 0;
+        background: var(--blanco);
+        z-index: 999;
+        text-align: center;
+    }
+
+    ul.show li {
+        margin: 20px 0;
+    }
+
+    .titulo {
+        position: static;
+        font-size: 26px;
+        line-height: 38px;
+        text-align: center;
+        margin-top: 80px;
+        padding: auto;
+    }
+
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+    box-sizing: border-box;
+    position: relative;
+    width: 95%;
+    top: 2.5cm;
+    margin-left: 5%;
+    left: -0.3cm;
+    right: auto;
+    background: #B9EDDD;
+    border-radius: 10px;
+    border: solid 5px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+    .card img {
+        width: 100px;
+        height: 100px;
+        left: 100px;
+        top: 0px;
+    }
+
+    .img-petsmart img {
+        height: 50px;
+        width: 75px;
+    }
+   
+    .wave {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .menu {
+        top: 0;
+        height: 60px;
+    }
+
+  
+}
+
+
+
+
+

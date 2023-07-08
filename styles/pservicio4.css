@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #B9EDDD;
+    --secundario: #87CBB9;
+    --terciario: #569DAA;
+    --ultimo:#577D86;
+    --gris: #CCCC;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+input{
+    position: absolute;
+    width: 647px;
+    height: 125px;
+    left: 45px;
+    top: 20px;
+}
+
+.titulo{
+    position: absolute;
+    width: 291px;
+    height: 98px;
+    left: 58px;
+    top: 216px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 49px;
+}
+.button {
+    position:absolute;
+    width: 425px;
+    height: 35px;
+    top: 310px;
+    left: 630px;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid;
+    border-radius: 24px; /* Valor igual a la mitad de la altura para lograr un borde redondeado */
+    background-color: #87CBB9;
+
+  }
+
+  .buttondos {
+    position: absolute;
+    width: 425px;
+    height: 35px;
+    top: 380px;
+    left: 630px;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid;
+    border-radius: 24px; /* Valor igual a la mitad de la altura para lograr un borde redondeado */
+    background-color: #569DAA;
+
+  }
+.card1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 390px;
+    top: 153px;
+}
+
+.card1 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 200px;
+    top: 19px;
+}
+
+.card1 p{
+    position: absolute;
+    width: 685px;
+    height: 85px;
+    top: 35px;
+    left: 585px;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 60px;
+}
+
+.card1 .sub{
+    position: absolute;
+    width: 908px;
+    height: 400px;
+    left: 585px;
+    top: 150px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.img-petsmart {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.img-petsmart img{
+    height: 100px;
+    width: 150px;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.wave .mi-svg {
+    stroke: none;
+    fill: #B9EDDD;
+    height: 100%;
+    width: 100%;
+}
+/*RESPONSIVE PARA PANTALLA PC 13 PULGADAS (MACBOOK)*/
+
+@media (max-width: 1440px) {
+    .card1 img{
+        box-sizing: border-box;
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        left: 120px;
+        top: 19px;
+    }
+    .card1 p{
+        left:510px;
+        top:10px;
+    }
+    .card1 .sub {
+        left: 510px;
+        width: 95%;
+        height: 80%;
+        top: 120px;
+        font-size: 20px;
+    }
+    .button{
+        margin-top: 10px;
+        top: 210px;
+        left:510px;
+    }
+    .buttondos{
+        top: 270px;
+        left:510px;
+    }
+
+
+
+}
+/*RESPONSIVE PARA TABLETA IPAD*/
+
+@media (max-width: 768px) {
+    .titulo, .card1, .card1 img, .card1 p, .card1 .sub {
+      position: static;
+      width: auto;
+      height: auto;
+      top: auto;
+      left: auto;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .card1 img {
+        margin-top: 10%;
+    }
+    .button {
+        margin-top: 10%;
+        position: static;
+        width: 420px;
+        height: 35px;
+        top: auto;
+        left: auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    
+    .buttondos {
+        position: static;
+        width: 420px;
+        height: 35px;
+        top: auto;
+        left: auto;
+        text-align: center;
+    }
+    
+    
+    .wave {
+        position: static;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        text-align: center;
+        z-index: -1;
+         position: fixed;
+         right: 0%;
+         bottom: 0%;
+    }
+    
+}
+
+
+ /*RESPONSIVE PARA TELEFONO IPHONE 12 PRO*/
+
+@media (max-width: 390px) {
+    .button,.buttondos{
+        width: 70%;
+    }
+    .wave {
+        position: static;
+        width: auto;
+        height: 30%;
+        top: auto;
+        left: auto;
+        text-align: center;
+        z-index: -1;
+        position: fixed;
+    }
+
+
+
+}

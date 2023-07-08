@@ -1,0 +1,98 @@
+#paseador-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-family: 'MyFont', sans-serif;
+    margin-top: 60px;
+}
+.back-button-container {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+}
+
+.back-button {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #B9EDDD;
+    color: #333;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: gray;
+    color: #fff;
+}
+
+.paseador-box {
+    background: #B9EDDD;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paseador-image {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+.paseador-details {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.paseador-nombre {
+    margin-top: 0;
+}
+
+.paseador-precio {
+    font-weight: bold;
+}
+
+.paseador-descripcion {
+    margin-bottom: 0;
+}
+
+.paseador-rating {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.reserva-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1500px) {
+    .paseador-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .paseador-image {
+        max-width: 100%;
+    }
+}

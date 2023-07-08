@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./styles/Ubi_paseador.csss">
+    <title>Ubicación Paseador</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <div>
+                <label>
+                    <input style="background: #B9EDDD; border-radius: 5px; width: 220px; height:30px;" type="text" placeholder="Buscar paseador">
+                </label>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="./index.html"><h1>INICIO</h1></a></li>
+                <li><a href="#"><h1>PASEADORES</h1></a></li>
+                <li><a href="./maps.html"><h1>MAPS</h1></a></li>
+                <li><a href="./perfil.html"><h1>PERFIL</h1></a></li>
+
+            </ul>
+            <span class="btn_menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <section> 
+            <h1 class="titulo">También puede buscar por su ubicación</h1>
+            <a href="./maps.html"><img class="map" src="images/image 8.svg" alt=""></a>
+
+            <div class="card1">
+                <a href="info_Paseador.html?id=1">
+                    <img src="images/Ellipse 5.svg" alt="">
+                    <p>Victor Cruz</p>
+                    <p2 class="sub">Precio por hora: S/40</p2>
+                </a>
+            </div>
+            <div class="card2">
+                <a href="info_Paseador.html?id=2">
+                    <img src="images/Ellipse 11.svg" alt="">
+                    <p>Fabricio Serna</p>
+                    <p2 class="sub">Precio por hora: S/45</p2>
+                </a>
+            </div>
+            <div class="card3">
+                <a href="info_Paseador.html?id=3">
+                    <img src="images/Ellipse 7.svg" alt="">
+                    <p>Jorge Ruiz</p>
+                    <p2 class="sub">Precio por hora: S/35</p2>
+                </a>
+            </div>
+            <div class="card4">
+                <a href="info_Paseador.html?id=4">
+                    <img src="images/Ellipse 8.svg" alt="">
+                    <p>Erick Ramirez</p>
+                    <p2 class="sub">Precio por hora: S/50</p2>
+                </a>
+            </div>
+            <div class="card5">
+                <a href="info_Paseador.html?id=5">
+                    <img src="images/Ellipse 9.svg" alt="">
+                    <p>Pedro Rossel</p>
+                    <p2 class="sub">Precio por hora: S/55</p2>
+                </a>
+            </div>
+            <div class="card6">
+                <a href="info_Paseador.html?id=6">
+                    <img src="images/Ellipse 10.svg" alt="">
+                    <p>Cesar Inciso</p>
+                    <p2 class="sub">Precio por hora: S/60</p2>
+                </a>
+            </div>
+            <div class="img-petsmart">
+                <img src="images/petsmart.png" alt="qr">
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn_menu = document.querySelector('.btn_menu');
+            if (btn_menu) {
+                btn_menu.addEventListener('click', () => {
+                    const nav_list = document.querySelector('.nav-list');
+                    nav_list.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+

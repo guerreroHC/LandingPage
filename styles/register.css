@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative; /* Cambio a posición relativa */
+    background-image: url('images/pass.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right 8cm;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3vw; 
+    line-height: 1.2;
+    text-align: center;
+    margin-top: -8cm;
+    white-space: nowrap; 
+}
+
+p {
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2vw; 
+    line-height: 1.2;
+    margin-top: 4cm;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.img-petsmart {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 2vw;
+}
+
+.img-petsmart img {
+    height: 8vw;
+    max-height: 100px;
+    width: auto;
+}
+
+
+
+@media (max-width: 600px), (max-width: 1024px) {
+    body {
+        background-size: 100% auto;
+    }
+
+    h1 {
+      font-size: 6vw; 
+      white-space: normal;
+      overflow: visible; 
+    }
+}
+

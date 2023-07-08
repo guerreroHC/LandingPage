@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #B9EDDD;
+    --secundario: #87CBB9;
+    --terciario: #569DAA;
+    --ultimo:#577D86;
+    --gris: #CCCC;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu {
+    background:var(--blanco);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position:fixed;
+    left: 0;
+    right:0;
+    top:0;
+    z-index: 999;
+    height: 85px;
+    width: 100vw;
+    display: flex;
+}
+
+input{
+    position: absolute;
+    width: 647px;
+    height: 125px;
+    left: 45px;
+    top: 20px;
+}
+
+.nav-list {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-left: auto;
+    list-style: none;
+    margin-right: 30px;
+}
+
+    .nav-list li {
+        margin: 0 5px;
+    }
+
+    .nav-list li a {
+        padding: 7px 13px;
+        text-decoration: none;
+        display: block;
+        color: var(--negro);
+    }
+
+    .nav-list li:hover, li.active {
+        background-color: var(--secundario);
+        font-weight: bold;
+        transition: .4s;
+    }
+
+.btn_menu {
+    margin-right: 30px;
+    color:var(--negro);
+    cursor: pointer;
+    display: none;
+}
+
+ul.show {
+    top:65px
+}
+
+
+body {
+    font-family:"Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+input{
+    position: absolute;
+    width: 647px;
+    height: 125px;
+    left: 45px;
+    top: 20px;
+}
+
+.titulo{
+    position: absolute;
+    width: 291px;
+    height: 98px;
+    left: 58px;
+    top: 216px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 49px;
+}
+.btn{
+    margin-top: 2rem;
+    
+}
+.button {
+    position: absolute;
+    width: 425px;
+    height: 35px;
+    top: 250px;
+    left: 585px;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid;
+    border-radius: 24px; /* Valor igual a la mitad de la altura para lograr un borde redondeado */
+    background-color: #87CBB9;
+
+  }
+  .buttondos {
+    position: absolute;
+    width: 425px;
+    height: 35px;
+    top: 540px;
+    left: 970px;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 50px;
+    border: 2px solid;
+    border-radius: 24px; /* Valor igual a la mitad de la altura para lograr un borde redondeado */
+    background-color: #569DAA;
+
+  }
+
+.card1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 380px;
+    height: 246px;
+    left: 390px;
+    top: 153px;
+}
+
+.card1 img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 200px;
+    top: 19px;
+}
+
+.card1 p{
+    position: absolute;
+    width: 685px;
+    height: 35px;
+    top: 107px;
+    left: 585px;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 60px;
+    display: flex;
+}
+
+.card1 .sub{
+    position: absolute;
+    width: 308px;
+    height: 30px;
+    left: 585px;
+    top: 273px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.img-petsmart {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.img-petsmart img{
+    height: 100px;
+    width: 150px;
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.wave .mi-svg {
+    stroke: none;
+    fill: #B9EDDD;
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 858px) {
+
+    .btn_menu {
+        display: inline-flex;
+    }
+
+    .nav-list {
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - 65px);
+        background-color: var(--terciario);
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+        align-items: center;
+        padding-left:10px
+    }
+
+    .nav-list li {
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+
+    .nav-list li:hover {
+        background: none;
+    }
+
+    .nav-list li a {
+        font-size: 20px;
+        color:var(--blanco);
+        font-weight: bold;
+    }
+
+    .nav-list li a:hover {
+        color: var(--blanco);
+    }
+
+}
+@media (max-width: 768px) {
+     .titulo,.card1, .card1 img, .card1 p, .card1 .sub {
+      position: static;
+      width: auto;
+      height: auto;
+      top: auto;
+      left: auto;
+      text-align: center;
+    }
+    .button{
+        position: static;
+        width: 420px;
+        height: 35px;
+        top: auto;
+        left: auto;
+        text-align: center;
+    }
+    .buttondos {
+        position: absolute;
+        width: 420px;
+        height: 35px;
+        top: calc(50% + 2rem);
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+
+  }

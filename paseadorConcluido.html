@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/paseadorConcluido.css">
+    <title>Buscar Paseador</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="menu">
+            <div>
+                <label>
+                    <input style="background: #B9EDDD; border-radius: 5px; width: 220px; height:30px;" type="text" placeholder="Buscar paseador">
+                </label>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="./index.html"><h1>INICIO</h1></a></li>
+                <li><a href="./Ubi_paseador.html"><h1>PASEADORES</h1></a></li>
+                <li><a href="./maps.html"><h1>MAPS</h1></a></li>
+                <li><a href="./perfil.html"><h1>PERFIL</h1></a></li>
+
+                
+            </ul>
+            <span class="btn_menu">
+                <i class="fa fa-bars"></i>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <section> 
+            <h1 class="titulo">-Ahora:</h1>
+            <h1 class="titulo-2">-Lunes:</h1>
+
+            <div class="map1">
+                <a href="./maps.html">
+                    <img src="./images/image2.png" alt=""></a>
+            </div>
+
+            <div class="map2">
+                <a href="./maps.html">
+                    <img src="./images/image3.png" alt=""></a>
+            </div>
+
+            <div class="profile">
+                <a href="./perfil.html">
+                    <img src="./images/profile.png" alt=""></a>
+            </div>
+
+            <button class="btn_menu">&#9776;</button>
+            
+            <div class="img-petsmart">
+            <img src="./images/petsmart.png" alt="qr">
+        </div>
+        <div class="wave">
+            <div style="height: 400px; overflow: hidden;" class="waveCont">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="mi-svg">
+                  <path d="M-1.97,-0.47 C47.68,146.55 49.94,-166.27 230.52,157.41 L215.29,160.38 L0.00,150.00 Z"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn_menu = document.querySelector('.btn_menu');
+            if (btn_menu) {
+                btn_menu.addEventListener('click', () => {
+                    const nav_list = document.querySelector('.nav-list');
+                    nav_list.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>
